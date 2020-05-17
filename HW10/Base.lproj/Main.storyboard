@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sS5-2Z-J3b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="6yS-Hh-2iN">
-                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="itemSize" width="174" height="165"/>
                                     <size key="estimatedItemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="40"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -28,42 +28,43 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="c3F-J0-dqw" customClass="ImageCollectionViewCell" customModule="HW10" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="200" height="200"/>
+                                        <rect key="frame" x="0.0" y="40" width="200" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WGJ-2F-hR8">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="165"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-Sl-sus">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="125"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="7sM-T8-gfO"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cto-pD-l3D">
-                                                    <rect key="frame" x="83.5" y="133" width="35.5" height="17"/>
+                                                    <rect key="frame" x="82.5" y="98" width="35.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-1A-3gN">
-                                                    <rect key="frame" x="85" y="158" width="32" height="18"/>
+                                                    <rect key="frame" x="59" y="123" width="82" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="VVY-Sl-sus" secondAttribute="bottom" constant="75" id="9tS-Fw-kJT"/>
-                                                <constraint firstItem="2TG-1A-3gN" firstAttribute="top" secondItem="Cto-pD-l3D" secondAttribute="bottom" constant="8" id="MbA-we-O0X"/>
-                                                <constraint firstItem="Cto-pD-l3D" firstAttribute="top" secondItem="VVY-Sl-sus" secondAttribute="bottom" constant="8" id="OGy-2p-Mh7"/>
-                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="top" secondItem="WGJ-2F-hR8" secondAttribute="top" id="Pip-ew-COZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="VVY-Sl-sus" secondAttribute="trailing" id="YFg-s2-iOG"/>
-                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="leading" secondItem="WGJ-2F-hR8" secondAttribute="leading" id="cwv-89-cQo"/>
-                                                <constraint firstAttribute="trailing" secondItem="2TG-1A-3gN" secondAttribute="trailing" constant="83" id="eSw-Dw-zx8"/>
-                                                <constraint firstItem="Cto-pD-l3D" firstAttribute="leading" secondItem="WGJ-2F-hR8" secondAttribute="leading" constant="83.5" id="koU-M0-Ll8"/>
-                                                <constraint firstItem="2TG-1A-3gN" firstAttribute="leading" secondItem="WGJ-2F-hR8" secondAttribute="leading" constant="85" id="zxc-7o-ehN"/>
-                                                <constraint firstAttribute="trailing" secondItem="Cto-pD-l3D" secondAttribute="trailing" constant="81" id="zzA-JK-srC"/>
+                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="centerX" secondItem="2TG-1A-3gN" secondAttribute="centerX" id="3bp-bn-Lwx"/>
+                                                <constraint firstItem="2TG-1A-3gN" firstAttribute="leading" secondItem="WGJ-2F-hR8" secondAttribute="leading" constant="59" id="Dfv-0E-diJ"/>
+                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="leading" secondItem="WGJ-2F-hR8" secondAttribute="leading" id="ERx-wK-iJI"/>
+                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="top" secondItem="WGJ-2F-hR8" secondAttribute="top" id="Gyk-wh-pI2"/>
+                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="centerX" secondItem="WGJ-2F-hR8" secondAttribute="centerX" id="bxk-Hf-jdt"/>
+                                                <constraint firstItem="VVY-Sl-sus" firstAttribute="centerX" secondItem="Cto-pD-l3D" secondAttribute="centerX" id="hhY-At-xQ5"/>
+                                                <constraint firstItem="Cto-pD-l3D" firstAttribute="top" secondItem="VVY-Sl-sus" secondAttribute="bottom" constant="8" id="hky-FS-V0L"/>
+                                                <constraint firstItem="2TG-1A-3gN" firstAttribute="top" secondItem="Cto-pD-l3D" secondAttribute="bottom" constant="8" id="rkO-AM-lx1"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="200" height="200"/>
+                                        <size key="customSize" width="200" height="165"/>
                                         <connections>
                                             <outlet property="imageCell" destination="VVY-Sl-sus" id="ayA-mm-SDW"/>
                                             <outlet property="priceLabel" destination="Cto-pD-l3D" id="fGp-Yg-3fo"/>
