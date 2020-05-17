@@ -23,4 +23,7 @@ class SettingsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var imageDynamic: UIImageView!
+    @IBOutlet weak var nameDynamic: UILabel!
+    
 }

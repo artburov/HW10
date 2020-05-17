@@ -30,8 +30,11 @@ class SectionFabric {
 class TableViewController: UIViewController {
     var sections = SectionFabric.sections()
     
-    //array with images
+    //arrays with images
     let sectionImages = [UIImage(named: "avio"), UIImage(named: "wifi"),UIImage(named: "bluetooth"), UIImage(named: "cell_connect"),UIImage(named: "modem"), UIImage(named: "notification"), UIImage(named: "sound"),UIImage(named: "dont_distr"),UIImage(named: "screen_time"), UIImage(named: "avio"),UIImage(named: "avio"), UIImage(named: "avio")]
+    
+    let accessorImages = [UIImage(named: "anvics"), UIImage(named: "red_number")]
+    
     
     @IBOutlet weak var myTableView: UITableView!
     let identificator = "MyCell"
@@ -60,6 +63,8 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identificator) as! SettingsTableViewCell
         
+        cell.nameDynamic.isHidden = true
+        
         let name = String( sections[indexPath.section].sectionItem[indexPath.row])
         cell.nameLabel.text = name
         cell.imageCell.image = sectionImages[indexPath.row]
@@ -67,37 +72,37 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         
         
         switch sections[indexPath.section].sectionItem[indexPath.row] {
-        case "Wi-Fi":
-            let sentImage = UIImage(named: "anvics")
-            let sentImageView = UIImageView(image: sentImage)
-            sentImageView.frame = CGRect(x: 0, y: 0, width: 95, height: 25)
-            sentImageView.tintColor = .lightGray
-            sentImageView.sizeToFit()
-            cell.accessoryView = sentImageView
         case "Авиарежим":
             let mySwitch = UISwitch()
             mySwitch.isOn = false
             cell.accessoryView = mySwitch
+        case "Wi-Fi":
+            cell.imageDynamic.image = accessorImages[0]
+            
         case "Bluetooth":
-            let myLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
-            myLabel.textColor         = UIColor.gray
-            myLabel.text              = String("Вкл.")
-            myLabel.textAlignment     = .right
-            myLabel.sizeToFit()
-            cell.accessoryView      = myLabel
+            cell.nameDynamic.isHidden = false
+            cell.nameDynamic.textColor = UIColor.gray
+            cell.nameDynamic.text = String("Вкл.")
+            cell.nameDynamic.textAlignment = .right
+            cell.nameDynamic.sizeToFit()
+            cell.accessoryView = cell.nameDynamic
+            
         case "Основные":
-            let sentImage = UIImage(named: "red_number")
-            let sentImageView = UIImageView(image: sentImage)
-            sentImageView.frame = CGRect(x: 0, y: 0, width: 50, height: 28)
-            sentImageView.sizeToFit()
-            cell.accessoryView = sentImageView
+            cell.imageDynamic.image = accessorImages[1]
+            
+            // Manual positioning of accessor image from array
+            cell.imageDynamic.translatesAutoresizingMaskIntoConstraints = false
+            cell.imageDynamic.topAnchor.constraint(equalTo: cell.topAnchor, constant: 2).isActive = true
+            cell.imageDynamic.rightAnchor.constraint(equalTo: cell.rightAnchor, constant: -10).isActive = true
+            cell.imageDynamic.bottomAnchor.constraint(equalTo: cell.bottomAnchor).isActive = true
+            cell.imageDynamic.widthAnchor.constraint(equalTo: cell.heightAnchor, constant: 20).isActive = true
+            
         default:
             break
         }
         return cell
     }
 }
-
 
 // need for cellForRowAt because offset error
 extension StringProtocol {
