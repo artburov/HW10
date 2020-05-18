@@ -17,7 +17,7 @@ struct Section {
 class SectionFabric {
     static func sections() -> [Section] {
         return [
-            Section(sectionTitle: "Настройки", sectionItem:
+            Section(sectionTitle: " ", sectionItem:
                 ["Авиарежим", "Wi-Fi", "Bluetooth", "Сотовая связь", "Режим модема"]),
             Section(sectionTitle: " ", sectionItem:
                 ["Уведомления", "Звук, тактильные сигналы", "Не беспокоить", "Экранное время",]),
@@ -67,6 +67,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         
         let name = String( sections[indexPath.section].sectionItem[indexPath.row])
         cell.nameLabel.text = name
+        cell.imageCell.frame.size.width = 25
         cell.imageCell.image = sectionImages[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         
@@ -110,3 +111,5 @@ extension StringProtocol {
         self[index(startIndex, offsetBy: offset)]
     }
 }
+
+
