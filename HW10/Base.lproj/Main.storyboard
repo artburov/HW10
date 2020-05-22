@@ -239,19 +239,19 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="jdf-jd-6aN">
-                                                <rect key="frame" x="21" y="486" width="367" height="120"/>
+                                                <rect key="frame" x="21" y="486" width="367" height="240"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="CEQ-08-DUD"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="YmE-GF-vSh"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_event_btn" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-jx-CuC">
-                                                <rect key="frame" x="35" y="611" width="344" height="54"/>
+                                                <rect key="frame" x="35" y="731" width="344" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="3Eh-Vu-EQi"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="make_order_btn" translatesAutoresizingMaskIntoConstraints="NO" id="NKn-NW-iFo">
-                                                <rect key="frame" x="35" y="670" width="344" height="45"/>
+                                                <rect key="frame" x="35" y="790" width="344" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="cIt-Es-dHi"/>
                                                 </constraints>
@@ -266,7 +266,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="202" id="i0W-b2-4mt"/>
-                                                    <constraint firstAttribute="width" constant="414" id="yEa-fJ-apd"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
